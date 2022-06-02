@@ -290,8 +290,10 @@ def build_model(args):
                      mapping_network=mapping_network_ema,
                      style_encoder=style_encoder_ema)
 
+
     fan = FAN(fname_pretrained=args.wing_path).eval()
     # fan.get_heatmap = fan.get_heatmap
     nets_ema.fan = fan
+
 
     return nets_ema

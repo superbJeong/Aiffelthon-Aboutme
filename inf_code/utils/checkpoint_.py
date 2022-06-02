@@ -22,8 +22,9 @@ class CheckpointIO(object):
     def register(self, **kwargs):
         self.module_dict.update(kwargs)
 
-    def load(self):
-        fname = self.fname_template
+    def load(self, step):
+        fname = self.fname_template.format(step)
+
         assert os.path.exists(fname), fname + ' does not exist!'
         print('Loading checkpoint from %s...' % fname)
         

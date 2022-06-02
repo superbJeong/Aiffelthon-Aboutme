@@ -7,12 +7,12 @@ https://github.com/junnnn-a/About_Me
 usr 폴더에 있는 사용자 이미지를 crop하고 align하여 src 폴더에 저장하고,
 이를 source 이미지로 하여 inference 하는 코드로 변경
 
-[220531]
 * Setting environment
 conda create -n stargan-v2 python=3.6.7
 conda activate stargan-v2
 conda install -y pytorch torchvision cpuonly -c pytorch
 pip install opencv-python==4.1.2.30 scikit-image==0.16.2 munch==2.5.0
+
 conda install -c conda-forge dlib
 
 """
