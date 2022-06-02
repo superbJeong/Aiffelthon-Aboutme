@@ -22,22 +22,6 @@ class CheckpointIO(object):
     def register(self, **kwargs):
         self.module_dict.update(kwargs)
 
-    def save(self):
-        # fname = self.fname_template.format(step)
-        # print('Saving checkpoint into %s...' % fname)
-        outdict = {}
-        # for name, module in self.module_dict.items():
-        #     print(type(module))
-        #     outdict[name] = module.state_dict()
-        # for name, module in self.module_dict.items():
-        #     print(module)
-        #     outdict[name] = module.state_dict()
-        # print(self.module_dict)
-
-        # torch.save(outdict, fname)
-        # torch.save(outdict, "state_dict.pt")
-        # torch.save(self.module_dict, "entire.pt")
-
     def load(self, step):
         fname = self.fname_template.format(step)
         assert os.path.exists(fname), fname + ' does not exist!'
@@ -48,4 +32,3 @@ class CheckpointIO(object):
         for name, module in self.module_dict.items():
             module.load_state_dict(module_dict[name])
 
-            torch.save(module.state_dict(), f"{name}_test.pt")
