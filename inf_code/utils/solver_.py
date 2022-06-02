@@ -30,12 +30,9 @@ class Solver(nn.Module):
         self.device = torch.device('cpu')
 
 
-        self.nets, self.nets_ema = build_model(args)
+        self.nets_ema = build_model(args)
         # print(self.nets_ema["generator"])
         # below setattrs are to make networks be children of Solver, e.g., for self.to(self.device)
-        for name, module in self.nets.items():
-            utils.print_network(module, name)
-            setattr(self, name, module)
         for name, module in self.nets_ema.items():
             setattr(self, name + '_ema', module)
 
@@ -69,9 +66,7 @@ class Solver(nn.Module):
         self._load_checkpoint(args.resume_iter)
 
         src = next(InputFetcher(loaders.src, None, args.latent_dim, 'test'))
-        # print(src.x.shape)
         ref = next(InputFetcher(loaders.ref, None, args.latent_dim, 'test'))
-        # print(ref.x.shape)
 
         fname = ospj(args.result_dir, 'reference.jpg')
         print('Working on {}...'.format(fname))

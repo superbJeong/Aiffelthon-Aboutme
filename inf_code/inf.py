@@ -1,4 +1,18 @@
 """
+
+About Me
+https://github.com/junnnn-a/About_Me
+
+* Setting environment
+conda create -n stargan-v2 python=3.6.7
+conda activate stargan-v2
+conda install -y pytorch torchvision cpuonly -c pytorch
+pip install opencv-python==4.1.2.30 scikit-image==0.16.2 munch==2.5.0
+conda install -c conda-forge
+
+"""
+
+"""
 StarGAN v2
 Copyright (c) 2020-present NAVER Corp.
 
@@ -8,10 +22,7 @@ http://creativecommons.org/licenses/by-nc/4.0/ or send a letter to
 Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 """
 
-"""
-About Me
-https://github.com/junnnn-a/About_Me
-"""
+
 
 import os
 import argparse

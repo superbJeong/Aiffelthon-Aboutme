@@ -282,18 +282,10 @@ class Discriminator(nn.Module):
 
 
 def build_model(args):
-    generator = Generator(args.img_size, args.style_dim, w_hpf=args.w_hpf)
-    mapping_network = MappingNetwork(args.latent_dim, args.style_dim, args.num_domains)
-    style_encoder = StyleEncoder(args.img_size, args.style_dim, args.num_domains)
-    discriminator = Discriminator(args.img_size, args.num_domains)
-    generator_ema = copy.deepcopy(generator)
-    mapping_network_ema = copy.deepcopy(mapping_network)
-    style_encoder_ema = copy.deepcopy(style_encoder)
+    generator_ema = Generator(args.img_size, args.style_dim, w_hpf=args.w_hpf)
+    mapping_network_ema = MappingNetwork(args.latent_dim, args.style_dim, args.num_domains)
+    style_encoder_ema = StyleEncoder(args.img_size, args.style_dim, args.num_domains)
 
-    nets = Munch(generator=generator,
-                 mapping_network=mapping_network,
-                 style_encoder=style_encoder,
-                 discriminator=discriminator)
     nets_ema = Munch(generator=generator_ema,
                      mapping_network=mapping_network_ema,
                      style_encoder=style_encoder_ema)
@@ -301,7 +293,6 @@ def build_model(args):
     if args.w_hpf > 0:
         fan = FAN(fname_pretrained=args.wing_path).eval()
         fan.get_heatmap = fan.get_heatmap
-        nets.fan = fan
         nets_ema.fan = fan
 
-    return nets, nets_ema
+    return nets_ema

@@ -218,7 +218,7 @@ class FAN(nn.Module):
         #     checkpoint = torch.load(fname)
         # else:
         #     checkpoint = torch.load(fname, map_location=torch.device('cpu'))
-        checkpoint = torch.load(fname)
+        checkpoint = torch.load(fname, map_location=torch.device('cpu'))
         model_weights = self.state_dict()
         model_weights.update({k: v for k, v in checkpoint['state_dict'].items()
                               if k in model_weights})
