@@ -1,3 +1,4 @@
 *.ckpt filter=lfs diff=lfs merge=lfs -text
 *.dat filter=lfs diff=lfs merge=lfs -text
 050000_nets_ema.ckpt filter=lfs diff=lfs merge=lfs -text
+wing.ckpt filter=lfs diff=lfs merge=lfs -text
