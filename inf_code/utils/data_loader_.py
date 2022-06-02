@@ -85,7 +85,7 @@ def _make_balanced_sampler(labels):
     return WeightedRandomSampler(weights, len(weights))
 
 
-def get_test_loader(root, img_size=256, batch_size=32,
+def get_test_loader(root, img_size=256, batch_size=1,
                     shuffle=True, num_workers=4):
     print('Preparing DataLoader for the generation phase...')
     transform = transforms.Compose([

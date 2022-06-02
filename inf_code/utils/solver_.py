@@ -39,23 +39,23 @@ class Solver(nn.Module):
         self.ckptios = [CheckpointIO(ospj(args.checkpoint_dir, '050000_nets_ema.ckpt'), data_parallel=False, **self.nets_ema)]
 
         self.to(self.device)
-        for name, network in self.named_children():
-            # Do not initialize the FAN parameters
-            if ('ema' not in name) and ('fan' not in name):
-                print('Initializing %s...' % name)
-                network.apply(utils.he_init)
+        # for name, network in self.named_children():
+        #     # Do not initialize the FAN parameters
+        #     if ('ema' not in name) and ('fan' not in name):
+        #         print('Initializing %s...' % name)
+        #         network.apply(utils.he_init)
 
-    def _save_checkpoint(self):
+    # def _save_checkpoint(self):
+    #     for ckptio in self.ckptios:
+    #         ckptio.save()
+
+    def _load_checkpoint(self):
         for ckptio in self.ckptios:
-            ckptio.save()
+            ckptio.load()
 
-    def _load_checkpoint(self, step):
-        for ckptio in self.ckptios:
-            ckptio.load(step)
-
-    def _reset_grad(self):
-        for optim in self.optims.values():
-            optim.zero_grad()
+    # def _reset_grad(self):
+    #     for optim in self.optims.values():
+    #         optim.zero_grad()
 
 
     @torch.no_grad()
@@ -63,7 +63,7 @@ class Solver(nn.Module):
         args = self.args
         nets_ema = self.nets_ema
         os.makedirs(args.result_dir, exist_ok=True)
-        self._load_checkpoint(args.resume_iter)
+        self._load_checkpoint()
 
         src = next(InputFetcher(loaders.src, None, args.latent_dim, 'test'))
         ref = next(InputFetcher(loaders.ref, None, args.latent_dim, 'test'))
