@@ -24,6 +24,7 @@ class CheckpointIO(object):
 
     def load(self, step):
         fname = self.fname_template.format(step)
+
         assert os.path.exists(fname), fname + ' does not exist!'
         print('Loading checkpoint from %s...' % fname)
         
