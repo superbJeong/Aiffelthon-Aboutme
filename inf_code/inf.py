@@ -31,6 +31,7 @@ Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 import os
 import argparse
+import sys
 
 from munch import Munch
 from torch.backends import cudnn
@@ -39,6 +40,7 @@ import torch
 from utils.data_loader_ import get_test_loader
 from utils.solver_ import Solver
 from utils.crop_ import crop_align
+import utils.scores_ as scr
 
 
 def str2bool(v):
@@ -55,7 +57,17 @@ def main(args):
     cudnn.benchmark = True
     torch.manual_seed(args.seed)
 
-    crop_align()
+    # lm = crop_align()
+    # usr_score = scr.get_scores_list(lm)
+    # print(usr_score)
+    # # sys.exit()
+    # final_scores = scr.calulate_scores(usr_score)
+    # # ref_name = scr.select_ref(final_scores)
+    # # print(ref_name)
+    # refs = scr.select_refs(final_scores)
+    # print(refs)
+
+    # sys.exit()
 
     solver = Solver(args)
 
@@ -114,7 +126,7 @@ if __name__ == '__main__':
 
     # directory for testing
     parser.add_argument('--result_dir', type=str, default='results',
-                        help='Directory for saving generated images and videos')
+                        help='Directory for saving generated images')
     parser.add_argument('--src_dir', type=str, default='inputs/src',
                         help='Directory containing input source images')
     parser.add_argument('--ref_dir', type=str, default='inputs/ref',

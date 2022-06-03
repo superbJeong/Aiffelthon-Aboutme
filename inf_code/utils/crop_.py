@@ -7,6 +7,8 @@ from utils.wing_ import FaceAligner
 from PIL import Image
 from torchvision import transforms
 import torchvision.utils as vutils
+import matplotlib.pyplot as plt
+import matplotlib.patches as patches
 
 def cropping(img_org, img_size, model_path):
   landmark_predictor = dlib.shape_predictor(model_path)
@@ -59,8 +61,17 @@ def cropping(img_org, img_size, model_path):
     if len(list_points) != 68:
       print('얼굴의 구성 요소가 잘 보이지 않습니다. (눈, 눈썹, 코, 입, 얼굴 윤곽 등)')
       return np.zeros([0, 0, 0])
+
+  # # 출력해보기
+  # img_result = img_org.copy()
+  # fig, ax = plt.subplots(1, figsize=(5, 5))
+  # for point in points.parts():
+  #   circle = patches.Circle((point.x, point.y), radius=2, edgecolor='r', facecolor='r')
+  #   ax.add_patch(circle)
+  # ax.imshow(cv2.cvtColor(img_result, cv2.COLOR_BGR2RGB))
+  # # 여기까지
     
-  return img_cropped
+  return img_cropped, list_points
 
 def denormalize(x):
     out = (x + 1) / 2
@@ -122,7 +133,7 @@ def crop_align():
     
 
     img_org = HangulFormat(path)      
-    img_cropped = cropping(img_org, img_size, model_path)
+    img_cropped, points = cropping(img_org, img_size, model_path)
 
     if not img_cropped.any():
       continue 
@@ -134,3 +145,5 @@ def crop_align():
 
     filename = os.path.join(dir_cropped, '_'.join(img_file.split(' '))[:-3]+'jpg')
     save_image(x_aligned, 1, filename=filename)
+
+  return points
