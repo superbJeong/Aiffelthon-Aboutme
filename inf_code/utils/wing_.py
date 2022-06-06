@@ -218,7 +218,7 @@ class FAN(nn.Module):
         #     checkpoint = torch.load(fname)
         # else:
         #     checkpoint = torch.load(fname, map_location=torch.device('cpu'))
-        checkpoint = torch.load(fname)
+        checkpoint = torch.load(fname, map_location=torch.device('cpu'))
         model_weights = self.state_dict()
         model_weights.update({k: v for k, v in checkpoint['state_dict'].items()
                               if k in model_weights})
@@ -306,7 +306,7 @@ class FaceAligner():
         for i, (img, landmarks) in enumerate(zip(imgs, landmarkss)):
             img_np = tensor2numpy255(img)
             img_np, landmarks = pad_mirror(img_np, landmarks)
-            print(img_np.shape)
+            # print(img_np.shape)
             transform = self.landmarks2mat(landmarks)
             rows, cols, _ = img_np.shape
             rows = max(rows, self.output_size)
@@ -543,6 +543,6 @@ def preprocess(x):
     x[x != x] = 0  # set nan to zero
     x2[x != x] = 0  # set nan to zero
 
-    print(x.shape, x2.shape)
+    # print(x.shape, x2.shape)
 
     return x.clamp_(0, 1), x2.clamp_(0, 1)

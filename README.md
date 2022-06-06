@@ -29,7 +29,9 @@
 ----------------------------------------------------------
 ## 📝 Contents 📝
 
-
-
+* 코드 실행을 위한 데이터 링크 -> inf_code/models 폴더 내에 위치
+  - stargan-v2 체크포인트: [link](https://drive.google.com/file/d/1Vxu-7W9YmAkcSPED-wlVJbc24AdxCU0-/view?usp=sharing)
+  - stargan-v2 부수 모델: [link](https://drive.google.com/file/d/1R1y5VDFHwwuOUIyrlwtnt_9rEOA7ShTm/view?usp=sharing)
+  - dlib landmark model: [link](https://drive.google.com/file/d/15amnnnJ6nZeNeYVfNqjKz9nNvrpadkVE/view?usp=sharing)
 
 ----------------------------------------------------------

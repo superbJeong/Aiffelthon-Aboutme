@@ -1,4 +1,23 @@
 """
+
+About Me
+https://github.com/junnnn-a/About_Me
+
+[220602]
+usr 폴더에 있는 사용자 이미지를 crop하고 align하여 src 폴더에 저장하고,
+이를 source 이미지로 하여 inference 하는 코드로 변경
+
+[220531]
+* Setting environment
+conda create -n stargan-v2 python=3.6.7
+conda activate stargan-v2
+conda install -y pytorch torchvision cpuonly -c pytorch
+pip install opencv-python==4.1.2.30 scikit-image==0.16.2 munch==2.5.0
+conda install -c conda-forge dlib
+
+"""
+
+"""
 StarGAN v2
 Copyright (c) 2020-present NAVER Corp.
 
@@ -8,13 +27,11 @@ http://creativecommons.org/licenses/by-nc/4.0/ or send a letter to
 Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 """
 
-"""
-About Me
-https://github.com/junnnn-a/About_Me
-"""
+
 
 import os
 import argparse
+import sys
 
 from munch import Munch
 from torch.backends import cudnn
@@ -22,7 +39,8 @@ import torch
 
 from utils.data_loader_ import get_test_loader
 from utils.solver_ import Solver
-# import core.crop as crop
+from utils.crop_ import crop_align
+import utils.scores_ as scr
 
 
 def str2bool(v):
@@ -35,9 +53,21 @@ def subdirs(dname):
 
 
 def main(args):
-    print(args)
+    # print(args)
     cudnn.benchmark = True
     torch.manual_seed(args.seed)
+
+    # lm = crop_align()
+    # usr_score = scr.get_scores_list(lm)
+    # print(usr_score)
+    # # sys.exit()
+    # final_scores = scr.calulate_scores(usr_score)
+    # # ref_name = scr.select_ref(final_scores)
+    # # print(ref_name)
+    # refs = scr.select_refs(final_scores)
+    # print(refs)
+
+    # sys.exit()
 
     solver = Solver(args)
 
@@ -46,12 +76,12 @@ def main(args):
         assert len(subdirs(args.ref_dir)) == args.num_domains
         loaders = Munch(src=get_test_loader(root=args.src_dir,
                                             img_size=args.img_size,
-                                            batch_size=args.val_batch_size,
+                                            # batch_size=args.val_batch_size,
                                             shuffle=False,
                                             num_workers=args.num_workers),
                         ref=get_test_loader(root=args.ref_dir,
                                             img_size=args.img_size,
-                                            batch_size=args.val_batch_size,
+                                            # batch_size=args.val_batch_size,
                                             shuffle=False,
                                             num_workers=args.num_workers))
         solver.sample(loaders)
@@ -77,43 +107,9 @@ if __name__ == '__main__':
     parser.add_argument('--style_dim', type=int, default=64,
                         help='Style code dimension')
 
-    # weight for objective functions
-    parser.add_argument('--lambda_reg', type=float, default=1,
-                        help='Weight for R1 regularization')
-    parser.add_argument('--lambda_cyc', type=float, default=1,
-                        help='Weight for cyclic consistency loss')
-    parser.add_argument('--lambda_sty', type=float, default=1,
-                        help='Weight for style reconstruction loss')
-    parser.add_argument('--lambda_ds', type=float, default=1,
-                        help='Weight for diversity sensitive loss')
-    parser.add_argument('--ds_iter', type=int, default=100000,
-                        help='Number of iterations to optimize diversity sensitive loss')
     parser.add_argument('--w_hpf', type=float, default=1,
                         help='weight for high-pass filtering')
 
-    # training arguments
-    parser.add_argument('--randcrop_prob', type=float, default=0.5,
-                        help='Probabilty of using random-resized cropping')
-    parser.add_argument('--total_iters', type=int, default=100000,
-                        help='Number of total iterations')
-    parser.add_argument('--resume_iter', type=int, default=50000,
-                        help='Iterations to resume training/testing')
-    parser.add_argument('--batch_size', type=int, default=8,
-                        help='Batch size for training')
-    parser.add_argument('--val_batch_size', type=int, default=32,
-                        help='Batch size for validation')
-    parser.add_argument('--lr', type=float, default=1e-4,
-                        help='Learning rate for D, E and G')
-    parser.add_argument('--f_lr', type=float, default=1e-6,
-                        help='Learning rate for F')
-    parser.add_argument('--beta1', type=float, default=0.0,
-                        help='Decay rate for 1st moment of Adam')
-    parser.add_argument('--beta2', type=float, default=0.99,
-                        help='Decay rate for 2nd moment of Adam')
-    parser.add_argument('--weight_decay', type=float, default=1e-4,
-                        help='Weight decay for optimizer')
-    parser.add_argument('--num_outs_per_domain', type=int, default=10,
-                        help='Number of generated images per domain during sampling')
 
     # misc
     parser.add_argument('--mode', type=str, default='sample',
@@ -128,13 +124,9 @@ if __name__ == '__main__':
     parser.add_argument('--checkpoint_dir', type=str, default='models',
                         help='Directory for saving network checkpoints')
 
-    # directory for calculating metrics
-    parser.add_argument('--eval_dir', type=str, default='expr/eval',
-                        help='Directory for saving metrics, i.e., FID and LPIPS')
-
     # directory for testing
     parser.add_argument('--result_dir', type=str, default='results',
-                        help='Directory for saving generated images and videos')
+                        help='Directory for saving generated images')
     parser.add_argument('--src_dir', type=str, default='inputs/src',
                         help='Directory containing input source images')
     parser.add_argument('--ref_dir', type=str, default='inputs/ref',
@@ -148,13 +140,6 @@ if __name__ == '__main__':
     parser.add_argument('--wing_path', type=str, default='models/wing.ckpt')
     parser.add_argument('--lm_path', type=str, default='models/celeba_lm_mean.npz')
 
-    # step size
-    parser.add_argument('--print_every', type=int, default=10)
-    parser.add_argument('--sample_every', type=int, default=5000)
-    parser.add_argument('--save_every', type=int, default=1000)
-    parser.add_argument('--eval_every', type=int, default=50000)
-
     args = parser.parse_args()
-
 
     main(args)
