@@ -15,7 +15,7 @@
 
 ### Team 
 ![image](https://user-images.githubusercontent.com/97006756/172087266-5d794b65-43c3-4937-b530-9fdbc6c830fc.png)  
-"자신의 고유의 아름다움과 개성을 찾아 자신에 대해(About me) 깊게 탐구해보자" 라는 의미를 담고있습니다.
+"자신의 고유의 아름다움과 개성을 찾아 자신에 대해(About me) 깊게 탐구하고 알자!" 라는 의미를 담고있습니다.
 
 
 
