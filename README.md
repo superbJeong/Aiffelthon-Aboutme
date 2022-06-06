@@ -1,6 +1,8 @@
 # 🌟 AIFFELTHON 🌟
 ## Date : 2022_04_20 ~2022_06_09
 
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=white"/>
+
 ----------------------------------------------------------
 ## project 
 ### project title
