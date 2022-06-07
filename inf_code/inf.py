@@ -3,6 +3,10 @@
 About Me
 https://github.com/junnnn-a/About_Me
 
+[220607]
+사용자 입력 이미지에서 닮은꼴 점수를 취득하여 보유하고 있는 연예인 닮은꼴 점수와 비교.
+가장 닮은 이미지를 찾아서 해당 연예인의 reference 이미지를 ref 폴더로 복사한다.
+
 [220602]
 usr 폴더에 있는 사용자 이미지를 crop하고 align하여 src 폴더에 저장하고,
 이를 source 이미지로 하여 inference 하는 코드로 변경
@@ -32,6 +36,8 @@ Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 import os
 import argparse
 import sys
+import glob
+import shutil
 
 from munch import Munch
 from torch.backends import cudnn
@@ -41,32 +47,40 @@ from utils.data_loader_ import get_test_loader
 from utils.solver_ import Solver
 from utils.crop_ import crop_align
 import utils.scores_ as scr
-
-
-def str2bool(v):
-    return v.lower() in ('true')
-
+import dlib
 
 def subdirs(dname):
     return [d for d in os.listdir(dname)
             if os.path.isdir(os.path.join(dname, d))]
 
-
 def main(args):
-    # print(args)
     cudnn.benchmark = True
     torch.manual_seed(args.seed)
 
-    # lm = crop_align()
-    # usr_score = scr.get_scores_list(lm)
-    # print(usr_score)
-    # # sys.exit()
-    # final_scores = scr.calulate_scores(usr_score)
-    # # ref_name = scr.select_ref(final_scores)
-    # # print(ref_name)
-    # refs = scr.select_refs(final_scores)
-    # print(refs)
+    # 기존 result 제거
+    if os.path.isfile(args.result_dir + "/out.png"): 
+        os.remove(args.result_dir + "/out.png")
+    if os.path.isfile(args.result_dir + "/reference.jpg"):
+        os.remove(args.result_dir + "/reference.jpg")
+    if os.path.isfile('inputs/ref/female/ref.jpg'):
+        os.remove('inputs/ref/female/ref.jpg')
 
+    # dlib 모델 디렉토리 설정  
+    model_path = 'models/shape_predictor_68_face_landmarks.dat'
+    lm_predictor = dlib.shape_predictor(model_path)
+
+    lm = crop_align(lm_predictor)
+    usr_score = scr.get_scores_list(lm)
+    final_scores = scr.calulate_scores(usr_score)
+    name_one = scr.select_ref(final_scores)
+    
+
+    # refs = scr.select_refs(final_scores)
+    # name_one = refs[0][0]
+    path_tmp = 'inputs/reference/'+name_one[:-4]+'*'
+    ref_name = glob.glob('inputs/reference/'+name_one[:-4]+'*')
+    print(path_tmp, ref_name[0])
+    shutil.copy(ref_name[0], 'inputs/ref/female/ref.jpg')
     # sys.exit()
 
     solver = Solver(args)
@@ -76,15 +90,14 @@ def main(args):
         assert len(subdirs(args.ref_dir)) == args.num_domains
         loaders = Munch(src=get_test_loader(root=args.src_dir,
                                             img_size=args.img_size,
-                                            # batch_size=args.val_batch_size,
                                             shuffle=False,
                                             num_workers=args.num_workers),
                         ref=get_test_loader(root=args.ref_dir,
                                             img_size=args.img_size,
-                                            # batch_size=args.val_batch_size,
                                             shuffle=False,
                                             num_workers=args.num_workers))
         solver.sample(loaders)
+        
     elif args.mode == 'align':
         from utils.wing_ import align_faces
         align_faces(args, args.inp_dir, args.out_dir)
