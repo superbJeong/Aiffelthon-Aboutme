@@ -12,4 +12,12 @@ About me model은 Dlib 모델을 활용한 닮은꼴 찾기 알고리즘 코드�
 - Score가 높은 3개 연예인 사진 선택
 
 ## 2. Stargan-v2 모델
+![image](https://user-images.githubusercontent.com/97006756/172538439-de81d886-e0af-4084-8398-2117e0f7f17f.png)
+![image](https://user-images.githubusercontent.com/97006756/172538468-a7a4cb95-b009-4fa3-8e59-f13c3253c642.png)
+
+### stargan-v2 모델 선정 이유
+- 한번에 여러 개의 도메인으로의 변환이 가능하기 때문(초반 목표로는 여자, 남자 메이크업, 헤어스타일 추천시스템도 만들어보기로 했기 때문)
+- 사용자의 얼굴형과 이목구비를 잘 가져오는 좋은 성능 때문
+
+
 
