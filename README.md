@@ -98,7 +98,7 @@ Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 �
 - 정구연 : 멋진 팀원분들과 함께 멋진 프로젝트를 진행 할 수 있어서 즐거웠어요! 공부하면서 못 배웠던 많은 것들을 이번 프로젝트를 통해 배운 것 같습니다. 감사합니다! 
 
 ----------------------------------------------------------
-# 📚 Skills
+## 📚 Skills
 - Web  
 
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>  <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=Flask&logoColor=white"/>   
