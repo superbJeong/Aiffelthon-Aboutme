@@ -1,17 +1,20 @@
 # 🌟 AIFFELTHON 🌟
 ## Date : 2022_04_20 ~2022_06_09
+----------------------------------------------------------
+## 🙋🏻‍ About Our Team
+![image](https://user-images.githubusercontent.com/97006756/172087266-5d794b65-43c3-4937-b530-9fdbc6c830fc.png)  
 
-### Web 
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>  <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=Flask&logoColor=white"/>   
-
-### Machine language
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>  <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white"/>  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=PyTorch&logoColor=white"/>
-
-### Tools 
-<img src="https://img.shields.io/badge/Weights & Biases-FFBE00?style=flat-square&logo=Weights & Biases&logoColor=white"/>   <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>   <img src="https://img.shields.io/badge/Slack-4A154B?style=flat-square&logo=Slack&logoColor=white"/>  
+Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 대해(About me) 깊게 탐구하고 알자!" 라는 의미를 담고있습니다.
 
 
-## ✔project 
+
+### Team Members
+![_](https://github.com/junnnn-a/About_Me/blob/main/images/members_role.png?raw=true)  
+
+
+----------------------------------------------------------
+
+## ✔ About Our Project
 ### project title
 ![_](https://github.com/junnnn-a/About_Me/blob/main/images/title.png?raw=true)
 ### project 선정 이유
@@ -22,31 +25,10 @@
 
 ----------------------------------------------------------
 
-## 🙋🏻‍Team 
-![image](https://user-images.githubusercontent.com/97006756/172087266-5d794b65-43c3-4937-b530-9fdbc6c830fc.png)  
-Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 대해(About me) 깊게 탐구하고 알자!" 라는 의미를 담고있습니다.
-
-
-
-### Members Inroduction
-![_](https://github.com/junnnn-a/About_Me/blob/main/images/members_role.png?raw=true)  
-
-<br/>
 
 
 ----------------------------------------------------------
-## 📅 What we did per week
 
-| Week | Date | 주차별 내용 | Link |
-| --- | --- | --- | --- |
-| 1주차 | 04/21 ~ 04/22 | 팀 빌딩, 핵심 모델 검색, 웹페이지 제작 | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/One%20Week.md)     |
-| 2주차 | 04/25 ~ 04/29 | 핵심 모델 검색, 닮은꼴 연예인 찾기 코드 구상  | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Two%20Weeks.md)  |
-| 3주차 | 05/02 ~ 05/06 | 모델 학습용 데이터 수집, 정제 코드 제작, 핵심 모델 결정  | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Three%20Weeks.md)  |
-| 4주차 | 05/09 ~ 05/13 | 모델 학습용 데이터 수집, 데이터 정제, StarGAN 모델 논문 공부 | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Four%20Weeks.md)  |
-| 5주차 | 05/16 ~ 05/20 | 모델 학습용 데이터 수집, 데이터 정제, StarGAN 모델 학습 | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Two%20Weeks.md)  |
-| 6주차 | 05/23 ~ 05/27 | 모델 학습용 데이터 수집, 닮은꼴 찾는 스코어 코드 기준 수립 및 완성, 모델학습  | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Six%20Weeks.md)  |
-| 7주차 | 05/30 ~ 06/03 | 레퍼런스 이미지 수집, 가공, 라벨링 모델 학습  | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Seven%20Weeks.md)  |
-| 8주차 | 06/06 ~ 06/09 | 하이퍼 파라미터 선정, 프로젝트 정리, 입력 이미지와 닮은꼴 연예인 매칭  | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Final%20Weeks.md)  |
 
 
 ----------------------------------------------------------
@@ -62,6 +44,7 @@ Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 �
 ## 🎠hyperparameter tuning
 ----------------------------------------------------------
 ## 🎨webpage
+
 ----------------------------------------------------------
 ## 회고
 ----------------------------------------------------------
@@ -72,5 +55,30 @@ Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 �
   - stargan-v2 체크포인트: [link](https://drive.google.com/file/d/1Vxu-7W9YmAkcSPED-wlVJbc24AdxCU0-/view?usp=sharing)
   - stargan-v2 부수 모델: [link](https://drive.google.com/file/d/1R1y5VDFHwwuOUIyrlwtnt_9rEOA7ShTm/view?usp=sharing)
   - dlib landmark model: [link](https://drive.google.com/file/d/15amnnnJ6nZeNeYVfNqjKz9nNvrpadkVE/view?usp=sharing)
+----------------------------------------------------------
+## 📅 What we did per week
 
+| Week | Date | 주차별 내용 | Link |
+| --- | --- | --- | --- |
+| 1주차 | 04/21 ~ 04/22 | 팀 빌딩, 핵심 모델 검색, 웹페이지 제작 | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/One%20Week.md)     |
+| 2주차 | 04/25 ~ 04/29 | 핵심 모델 검색, 닮은꼴 연예인 찾기 코드 구상  | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Two%20Weeks.md)  |
+| 3주차 | 05/02 ~ 05/06 | 모델 학습용 데이터 수집, 정제 코드 제작, 핵심 모델 결정  | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Three%20Weeks.md)  |
+| 4주차 | 05/09 ~ 05/13 | 모델 학습용 데이터 수집, 데이터 정제, StarGAN 모델 논문 공부 | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Four%20Weeks.md)  |
+| 5주차 | 05/16 ~ 05/20 | 모델 학습용 데이터 수집, 데이터 정제, StarGAN 모델 학습 | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Two%20Weeks.md)  |
+| 6주차 | 05/23 ~ 05/27 | 모델 학습용 데이터 수집, 닮은꼴 찾는 스코어 코드 기준 수립 및 완성, 모델학습  | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Six%20Weeks.md)  |
+| 7주차 | 05/30 ~ 06/03 | 레퍼런스 이미지 수집, 가공, 라벨링 모델 학습  | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Seven%20Weeks.md)  |
+| 8주차 | 06/06 ~ 06/09 | 하이퍼 파라미터 선정, 프로젝트 정리, 입력 이미지와 닮은꼴 연예인 매칭  | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Final%20Weeks.md)  |
+----------------------------------------------------------
+## 📚 Skills
+- Web  
+
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>  <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=Flask&logoColor=white"/>   
+
+- Machine language  
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>  <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white"/>  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=PyTorch&logoColor=white"/>
+
+- Other Tools  
+
+<img src="https://img.shields.io/badge/Weights & Biases-FFBE00?style=flat-square&logo=Weights & Biases&logoColor=white"/>   <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>   <img src="https://img.shields.io/badge/Slack-4A154B?style=flat-square&logo=Slack&logoColor=white"/>  
 ----------------------------------------------------------
