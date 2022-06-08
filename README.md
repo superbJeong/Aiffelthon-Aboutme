@@ -1,8 +1,17 @@
 # 🌟 AIFFELTHON 🌟
 ## Date : 2022_04_20 ~2022_06_09
 
-----------------------------------------------------------
-## project 
+### Web 
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>  <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=Flask&logoColor=white"/>   
+
+### machine language
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>  <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=Jupyter&logoColor=white"/>  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=PyTorch&logoColor=white"/>
+
+### Tools 
+<img src="https://img.shields.io/badge/Weights & Biases-FFBE00?style=flat-square&logo=Weights & Biases&logoColor=white"/>   <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>   <img src="https://img.shields.io/badge/Slack-4A154B?style=flat-square&logo=Slack&logoColor=white"/>  
+
+
+## ✔project 
 ### project title
 ![_](https://github.com/junnnn-a/About_Me/blob/main/images/title.png?raw=true)
 ### project 선정 이유
@@ -11,19 +20,19 @@
 1500명 남녀 대상으로 설문조사 결과 약 40%가 외모를 불만족하며, 그 중 87%는 성형을 할 것 이라고 답하였고 과도한 성형, 외모집착으로 힘들어하는 사람이 늘고 있습니다.
 성형이 정답이 아닌 자신 외모의 고유의 아름다움, 개성에 어울리는 메이크업을 추천하여 사용자가 스스로 자신의 아름다움을 꺠닫는 과정에서  자연스럽게 자신감을 회복하면 좋겠다고 생각하여 주제를 선정하게 되었습니다.
 
+----------------------------------------------------------
 
-
-## Team 
+## 🙋🏻‍Team 
 ![image](https://user-images.githubusercontent.com/97006756/172087266-5d794b65-43c3-4937-b530-9fdbc6c830fc.png)  
-"자신의 고유의 아름다움과 개성을 찾아 자신에 대해(About me) 깊게 탐구해보자" 라는 의미를 담고있습니다.
+Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 대해(About me) 깊게 탐구하고 알자!" 라는 의미를 담고있습니다.
 
 
 
-## 🙋🏻‍♀️ Members & Role 🙋🏻‍♂️
+### Members Inroduction
 ![_](https://github.com/junnnn-a/About_Me/blob/main/images/members_role.png?raw=true)
 
 ----------------------------------------------------------
-## 📅 Progress by date 📅 
+## 📅 What we did per week
 
 | Week | Date | 커리큘럼 내용 | Link |
 | ------ | ------ | ----------- | ------ |
@@ -38,12 +47,21 @@
 
 
 ----------------------------------------------------------
-## pipeline
+## ✨pipeline
 ![image](https://user-images.githubusercontent.com/97006756/172088516-bef64f88-f927-4bbb-9c5d-f5c8a6863d47.png)
 ----------------------------------------------------------
-## Data
+## 🎉![Data](https://github.com/junnnn-a/About_Me/blob/main/Data/readme.md)
+----------------------------------------------------------
+## 🎡![About me model](https://github.com/junnnn-a/About_Me/blob/main/Models/readme.md)
+----------------------------------------------------------
+## 🎠hyperparameter tuning
+----------------------------------------------------------
+## 🎨webpage
+----------------------------------------------------------
+## 회고
+----------------------------------------------------------
 
-## 📝 Contents 📝
+## 📝Contents
 
 * 코드 실행을 위한 데이터 링크 -> inf_code/models 폴더 내에 위치
   - stargan-v2 체크포인트: [link](https://drive.google.com/file/d/1Vxu-7W9YmAkcSPED-wlVJbc24AdxCU0-/view?usp=sharing)
