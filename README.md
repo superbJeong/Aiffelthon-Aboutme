@@ -29,7 +29,7 @@ Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 �
 
 
 ### Members Inroduction
-![_](https://github.com/junnnn-a/About_Me/blob/main/images/members_role.png?raw=true)
+![_](https://github.com/junnnn-a/About_Me/blob/main/images/members_role.png?raw=true)  
 
 ----------------------------------------------------------
 ## 📅 What we did per week
@@ -48,6 +48,7 @@ Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 �
 
 
 ----------------------------------------------------------
+
 ## ✨pipeline
 ![image](https://user-images.githubusercontent.com/97006756/172088516-bef64f88-f927-4bbb-9c5d-f5c8a6863d47.png)
 ----------------------------------------------------------
