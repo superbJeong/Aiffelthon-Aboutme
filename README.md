@@ -27,7 +27,7 @@ Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 �
 - Pipeline
 - Data
 - Model
-- [hyperparameter tuning](#what-we-did-per-week)
+- [hyperparameter tuning](#📅-what-we-did-per-week)
 - webpage
 
 
