@@ -13,7 +13,6 @@ Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 �
 
 
 ----------------------------------------------------------
-
 ## ✔ About Our Project
 ### project title
 ![_](https://github.com/junnnn-a/About_Me/blob/main/images/title.png?raw=true)
@@ -24,11 +23,19 @@ Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 �
 성형이 정답이 아닌 자신 외모의 고유의 아름다움, 개성에 어울리는 메이크업을 추천하여 사용자가 스스로 자신의 아름다움을 꺠닫는 과정에서  자연스럽게 자신감을 회복하면 좋겠다고 생각하여 주제를 선정하게 되었습니다.
 
 ----------------------------------------------------------
-
+## 📝Contents
+- Pipeline
+- Data
+- Model
+- [hyperparameter tuning](#what-we-did-per-week)
+- webpage
 
 
 ----------------------------------------------------------
-
+* 코드 실행을 위한 데이터 링크 -> inf_code/models 폴더 내에 위치
+  - stargan-v2 체크포인트: [link](https://drive.google.com/file/d/1Vxu-7W9YmAkcSPED-wlVJbc24AdxCU0-/view?usp=sharing)
+  - stargan-v2 부수 모델: [link](https://drive.google.com/file/d/1R1y5VDFHwwuOUIyrlwtnt_9rEOA7ShTm/view?usp=sharing)
+  - dlib landmark model: [link](https://drive.google.com/file/d/15amnnnJ6nZeNeYVfNqjKz9nNvrpadkVE/view?usp=sharing)
 
 
 ----------------------------------------------------------
@@ -49,12 +56,7 @@ Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 �
 ## 회고
 ----------------------------------------------------------
 
-## 📝Contents
 
-* 코드 실행을 위한 데이터 링크 -> inf_code/models 폴더 내에 위치
-  - stargan-v2 체크포인트: [link](https://drive.google.com/file/d/1Vxu-7W9YmAkcSPED-wlVJbc24AdxCU0-/view?usp=sharing)
-  - stargan-v2 부수 모델: [link](https://drive.google.com/file/d/1R1y5VDFHwwuOUIyrlwtnt_9rEOA7ShTm/view?usp=sharing)
-  - dlib landmark model: [link](https://drive.google.com/file/d/15amnnnJ6nZeNeYVfNqjKz9nNvrpadkVE/view?usp=sharing)
 ----------------------------------------------------------
 ## 📅 What we did per week
 
