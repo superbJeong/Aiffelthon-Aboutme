@@ -39,7 +39,6 @@ Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 �
 
 | Week | Date | 주차별 내용 | Link |
 | --- | --- | --- | --- |
-| 1주차 | 22.04.21 | 팀 빌딩 & 연구개발 계획서 작성 | [🔗](https://modulabs.notion.site/22-04-21-0c5f2984772e4214a99a3564c8522062)    |
 | 1주차 | 04/21 ~ 04/22 | 팀 빌딩, 핵심 모델 검색, 웹페이지 제작 | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/One%20Week.md)     |
 | 2주차 | 04/25 ~ 04/29 | 핵심 모델 검색, 닮은꼴 연예인 찾기 코드 구상  | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Two%20Weeks.md)  |
 | 3주차 | 05/02 ~ 05/06 | 모델 학습용 데이터 수집, 정제 코드 제작, 핵심 모델 결정  | [🔗](https://github.com/junnnn-a/About_Me/blob/main/weekly%20log/Three%20Weeks.md)  |
