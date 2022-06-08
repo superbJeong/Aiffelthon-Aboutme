@@ -11,7 +11,7 @@
 <img src="https://img.shields.io/badge/Weights & Biases-FFBE00?style=flat-square&logo=Weights & Biases&logoColor=white"/>   <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>   <img src="https://img.shields.io/badge/Slack-4A154B?style=flat-square&logo=Slack&logoColor=white"/>  
 
 
-## project 
+## ✔project 
 ### project title
 ![_](https://github.com/junnnn-a/About_Me/blob/main/images/title.png?raw=true)
 ### project 선정 이유
@@ -22,17 +22,17 @@
 
 ----------------------------------------------------------
 
-## Team 
+## 🙋🏻‍Team 
 ![image](https://user-images.githubusercontent.com/97006756/172087266-5d794b65-43c3-4937-b530-9fdbc6c830fc.png)  
 Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 대해(About me) 깊게 탐구하고 알자!" 라는 의미를 담고있습니다.
 
 
 
-### 🙋🏻‍♀️ Members Inroduction 🙋🏻‍
+### Members Inroduction
 ![_](https://github.com/junnnn-a/About_Me/blob/main/images/members_role.png?raw=true)
 
 ----------------------------------------------------------
-## 📅 What we did per week 📅 
+## 📅 What we did per week
 
 | Week | Date | 커리큘럼 내용 | Link |
 | ------ | ------ | ----------- | ------ |
@@ -47,21 +47,21 @@ Team meaning : "자신의 고유의 아름다움과 개성을 찾아 자신에 �
 
 
 ----------------------------------------------------------
-## pipeline
+## ✨pipeline
 ![image](https://user-images.githubusercontent.com/97006756/172088516-bef64f88-f927-4bbb-9c5d-f5c8a6863d47.png)
 ----------------------------------------------------------
-## ![Data](https://github.com/junnnn-a/About_Me/blob/main/Data/readme.md)
+## 🎉![Data](https://github.com/junnnn-a/About_Me/blob/main/Data/readme.md)
 ----------------------------------------------------------
-## ![About me model](https://github.com/junnnn-a/About_Me/blob/main/Models/readme.md)
+## 🎡![About me model](https://github.com/junnnn-a/About_Me/blob/main/Models/readme.md)
 ----------------------------------------------------------
-## hyperparameter tuning
+## 🎠hyperparameter tuning
 ----------------------------------------------------------
-## webpage
+## 🎨webpage
 ----------------------------------------------------------
 ## 회고
 ----------------------------------------------------------
 
-## 📝 Contents 📝
+## 📝Contents
 
 * 코드 실행을 위한 데이터 링크 -> inf_code/models 폴더 내에 위치
   - stargan-v2 체크포인트: [link](https://drive.google.com/file/d/1Vxu-7W9YmAkcSPED-wlVJbc24AdxCU0-/view?usp=sharing)
