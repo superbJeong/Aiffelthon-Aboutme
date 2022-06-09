@@ -8,7 +8,7 @@
   - Pipeline
   - Data
   - Model
-  - [hyperparameter tuning]
+  - hyperparameter tuning
   - webpage
 - [What we did per week](#📅-what-we-did-per-week)
 - [Takeaway](#✨-takeaway)
