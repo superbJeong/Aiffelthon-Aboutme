@@ -3,16 +3,16 @@
 
 ----------------------------------------------------------
 ## 📝 Index
-- [About Our Team](#🙋🏻‍-about-our-team)
-- [About Our Project](#✔-about-our-project)
+- [About Our Team](#-about-our-team)
+- [About Our Project](#-about-our-project)
   - Pipeline
   - Data
   - Model
   - hyperparameter tuning
   - webpage
-- [What we did per week](#📅-what-we-did-per-week)
-- [Takeaway](#✨-takeaway)
-- [Skills](#📚-skills)
+- [What we did per week](#-what-we-did-per-week)
+- [Takeaway](#-takeaway)
+- [Skills](#-skills)
 
 ----------------------------------------------------------
 ## 🙋🏻‍ About Our Team
